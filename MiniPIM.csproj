@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63C9818C-936A-485B-9C69-38C61AED8821}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MiniPIM</RootNamespace>
+    <AssemblyName>MiniPIM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.9.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.9.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.9.0.0\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atributo.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AtributoProducto.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriaP.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cuenta.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Producto.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Relaciones.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Relaciones_Productos.cs">
+      <DependentUpon>BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VR_Alerta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VR_Alerta.Designer.cs">
+      <DependentUpon>VR_Alerta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VR_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VR_Eliminar.Designer.cs">
+      <DependentUpon>VR_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Categoria_CrearModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V_Categoria_CrearModificar.Designer.cs">
+      <DependentUpon>V_Categoria_CrearModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Exportar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_Exportar.Designer.cs">
+      <DependentUpon>V_Exportar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Exportar_Filtrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V_Exportar_Filtrado.Designer.cs">
+      <DependentUpon>V_Exportar_Filtrado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_ListasPadre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_ListasPadre.Designer.cs">
+      <DependentUpon>V_ListasPadre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Productos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_Productos.Designer.cs">
+      <DependentUpon>V_Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Atributos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_Atributos.Designer.cs">
+      <DependentUpon>V_Atributos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Atributo_Crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V_Atributo_Crear.Designer.cs">
+      <DependentUpon>V_Atributo_Crear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Atributo_Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V_Atributo_Modificar.Designer.cs">
+      <DependentUpon>V_Atributo_Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Categorias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_Categorias.Designer.cs">
+      <DependentUpon>V_Categorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V_Principal.Designer.cs">
+      <DependentUpon>V_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="V_ProductoIndividual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_ProductoIndividual.Designer.cs">
+      <DependentUpon>V_ProductoIndividual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Producto_CrearModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V_Producto_CrearModificar.Designer.cs">
+      <DependentUpon>V_Producto_CrearModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Relaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_Relaciones.Designer.cs">
+      <DependentUpon>V_Relaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Relaciones_CrearModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V_Relaciones_CrearModificar.Designer.cs">
+      <DependentUpon>V_Relaciones_CrearModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V_Resumen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="V_Resumen.Designer.cs">
+      <DependentUpon>V_Resumen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VR_Alerta.resx">
+      <DependentUpon>VR_Alerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VR_Eliminar.resx">
+      <DependentUpon>VR_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Atributos.resx">
+      <DependentUpon>V_Atributos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Atributo_Crear.resx">
+      <DependentUpon>V_Atributo_Crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Atributo_Modificar.resx">
+      <DependentUpon>V_Atributo_Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Categorias.resx">
+      <DependentUpon>V_Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Categoria_CrearModificar.resx">
+      <DependentUpon>V_Categoria_CrearModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Exportar.resx">
+      <DependentUpon>V_Exportar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Exportar_Filtrado.resx">
+      <DependentUpon>V_Exportar_Filtrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_ListasPadre.resx">
+      <DependentUpon>V_ListasPadre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Principal.resx">
+      <DependentUpon>V_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_ProductoIndividual.resx">
+      <DependentUpon>V_ProductoIndividual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Productos.resx">
+      <DependentUpon>V_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Producto_CrearModificar.resx">
+      <DependentUpon>V_Producto_CrearModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Relaciones.resx">
+      <DependentUpon>V_Relaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Relaciones_CrearModificar.resx">
+      <DependentUpon>V_Relaciones_CrearModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V_Resumen.resx">
+      <DependentUpon>V_Resumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="BD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BD.edmx.diagram">
+      <DependentUpon>BD.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICONtag.png" />
+    <None Include="Resources\ICONrelation.png" />
+    <None Include="Resources\ICONproduct.png" />
+    <None Include="Resources\ICONtick.png" />
+    <None Include="Resources\ICONdoc.png" />
+    <None Include="Resources\ICONnoimageG.png" />
+    <None Include="Resources\ICONnoimage.png" />
+    <None Include="Resources\ICONedit - copia.png" />
+    <None Include="Resources\ICONdelete - copia.png" />
+    <None Include="Resources\ICONback.png" />
+    <Content Include="BD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BD.edmx</DependentUpon>
+      <LastGenOutput>BD.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BD.edmx</DependentUpon>
+      <LastGenOutput>BD.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\ICONattribute.png" />
+    <Content Include="Resources\ICONdelete.png" />
+    <None Include="Resources\ICONedit.png" />
+    <None Include="Resources\ICONdelete1.png" />
+    <None Include="Resources\ICONadd.png" />
+    <None Include="Resources\ICONuser2.png" />
+    <None Include="Resources\ICONuser1.png" />
+    <None Include="Resources\ICONuser.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

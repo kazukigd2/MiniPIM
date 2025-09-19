@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mi_sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=MiPassword123!
+    ports:
+      - "1433:1433"
+    networks:
+      - sqlnet
+    volumes:
+      - ./init:/init
+
+  db-init:
+    image: mcr.microsoft.com/mssql-tools
+    depends_on:
+      - sqlserver
+    networks:
+      - sqlnet
+    volumes:
+      - ./init:/init
+    entrypoint: >
+      /bin/bash -c "
+        echo 'Esperando SQL Server...' &&
+        sleep 20 &&
+        /opt/mssql-tools/bin/sqlcmd -S sqlserver -U sa -P MiPassword123! -i /init/BD.sql
+      "
+
+networks:
+  sqlnet:
+    driver: bridge

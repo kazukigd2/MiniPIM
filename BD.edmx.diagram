@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a92c8bbce8314dedbe2679b1a85140b1" Name="Diagram1">
+        <EntityTypeShape EntityType="grupo21DBModel.Atributo" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="grupo21DBModel.AtributoProducto" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="grupo21DBModel.CategoriaP" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="grupo21DBModel.Cuenta" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grupo21DBModel.Producto" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="grupo21DBModel.Relaciones" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="grupo21DBModel.Relaciones_Productos" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="grupo21DBModel.FK_Atributo_Cuenta" ManuallyRouted="false" />
+        <AssociationConnector Association="grupo21DBModel.FK_AtributoProducto_Atributo" ManuallyRouted="false" />
+        <AssociationConnector Association="grupo21DBModel.FK_AtributoProducto_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="grupo21DBModel.FK_CategoriaP_Cuenta" ManuallyRouted="false" />
+        <AssociationConnector Association="grupo21DBModel.FK_Producto_Cuenta" ManuallyRouted="false" />
+        <AssociationConnector Association="grupo21DBModel.FK_Relaciones_Cuenta" ManuallyRouted="false" />
+        <AssociationConnector Association="grupo21DBModel.FK_Relaciones_Productos_ProductoDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="grupo21DBModel.FK_Relaciones_Productos_ProductoOrigen" ManuallyRouted="false" />
+        <AssociationConnector Association="grupo21DBModel.FK_Relaciones_Productos_Relaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="grupo21DBModel.CategoriaProducto" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
