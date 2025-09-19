@@ -1,5 +1,4 @@
 # Ignorar archivos de compilación y binarios en cualquier carpeta de proyectos
-**/bin/
 **/obj/
 **/[Bb]uild/
 **/[Ll]og/
