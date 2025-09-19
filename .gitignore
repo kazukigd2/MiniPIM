@@ -10,6 +10,7 @@
 **/*.suo
 **/*.userosscache
 **/*.sln.docstates
+/src/**/bin/
 
 # Archivos y paquetes de NuGet
 **/*.nupkg
